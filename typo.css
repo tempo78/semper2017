@@ -1,0 +1,91 @@
+/** Choix : FuturaT-Bold,FuturaT-BoldOblique,FuturaT-Book,FuturaT-BookOblique,FuturaT-Demi,FuturaT-DemiOblique,
+			FuturaT-ExtraBold,FuturaT-ExtraBoldOblique,FuturaT-Light,FuturaT-LightOblique,FuturaT-Medium,FuturaT-MediumOblique; **/
+@font-face {
+	font-family: 'FuturaT-Light';
+	src: url('webfont/FuturaT-Light.eot');
+	src: local('☺'), url('webfont/FuturaT-Light.woff') format('woff'), url('webfont/FuturaT-Light.ttf') format('truetype'), url('webfont/FuturaT-Light.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'FuturaT-LightOblique';
+	src: url('webfont/FuturaT-LightOblique.eot');
+	src: local('☺'), url('webfont/FuturaT-LightOblique.woff') format('woff'), url('webfont/FuturaT-LightOblique.ttf') format('truetype'), url('webfont/FuturaT-LightOblique.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'FuturaT-Book';
+	src: url('webfont/FuturaT-Book.eot');
+	src: local('☺'), url('webfont/FuturaT-Book.woff') format('woff'), url('webfont/FuturaT-Book.ttf') format('truetype'), url('webfont/FuturaT-Book.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'FuturaT-BookOblique';
+	src: url('webfont/FuturaT-BookOblique.eot');
+	src: local('☺'), url('webfont/FuturaT-BookOblique.woff') format('woff'), url('webfont/FuturaT-BookOblique.ttf') format('truetype'), url('webfont/FuturaT-BookOblique.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'FuturaT-Medium';
+	src: url('webfont/FuturaT-Medium.eot');
+	src: local('☺'), url('webfont/FuturaT-Medium.woff') format('woff'), url('webfont/FuturaT-Medium.ttf') format('truetype'), url('webfont/FuturaT-Medium.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'FuturaT-MediumOblique';
+	src: url('webfont/FuturaT-MediumOblique.eot');
+	src: local('☺'), url('webfont/FuturaT-MediumOblique.woff') format('woff'), url('webfont/FuturaT-MediumOblique.ttf') format('truetype'), url('webfont/FuturaT-MediumOblique.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'FuturaT-Demi';
+	src: url('webfont/FuturaT-Demi.eot');
+	src: local('☺'), url('webfont/FuturaT-Demi.woff') format('woff'), url('webfont/FuturaT-Demi.ttf') format('truetype'), url('webfont/FuturaT-Demi.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'FuturaT-DemiOblique';
+	src: url('webfont/FuturaT-DemiOblique.eot');
+	src: local('☺'), url('webfont/FuturaT-DemiOblique.woff') format('woff'), url('webfont/FuturaT-DemiOblique.ttf') format('truetype'), url('webfont/FuturaT-DemiOblique.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'FuturaT-Bold';
+	src: url('webfont/FuturaT-Bold.eot');
+	src: local('☺'), url('webfont/FuturaT-Bold.woff') format('woff'), url('webfont/FuturaT-Bold.ttf') format('truetype'), url('webfont/FuturaT-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'FuturaT-BoldOblique';
+	src: url('webfont/FuturaT-BoldOblique.eot');
+	src: local('☺'), url('webfont/FuturaT-BoldOblique.woff') format('woff'), url('webfont/FuturaT-BoldOblique.ttf') format('truetype'), url('webfont/FuturaT-BoldOblique.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'FuturaT-ExtraBold';
+	src: url('webfont/FuturaT-ExtraBold.eot');
+	src: local('☺'), url('webfont/FuturaT-ExtraBold.woff') format('woff'), url('webfont/FuturaT-ExtraBold.ttf') format('truetype'), url('webfont/FuturaT-ExtraBold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'FuturaT-ExtraBoldOblique';
+	src: url('webfont/FuturaT-ExtraBoldOblique.eot');
+	src: local('☺'), url('webfont/FuturaT-ExtraBoldOblique.woff') format('woff'), url('webfont/FuturaT-ExtraBoldOblique.ttf') format('truetype'), url('webfont/FuturaT-ExtraBoldOblique.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
