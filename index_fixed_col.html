@@ -1,0 +1,268 @@
+<html>
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="./typo.css?v=1" media="all" rel="stylesheet" type="text/css" />
+<script src="./jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+
+<!-- Map the correct css style to create the fixed position -->
+<style>
+
+html {overflow:-moz-scrollbars-vertical;overflow-y:scroll;-webkit-font-smoothing:antialiased}
+body {font-family:"FuturaT-Book",Arial,Verdana,Helvetica,sans-serif; font-size:12px; color:#008A54; padding:0; margin:0; background-color:#ffffff; position:relative;}
+ul {list-style:none}
+strong {font-family:"FuturaT-Medium"; font-weight:normal;}
+img,ul,li,table,tr,td,form {border:0;margin:0;padding:0}
+a {text-decoration:none;color:#008A54; cursor:pointer; cursor:hand;}
+h1,h2,h3 {font-weight:normal}
+input[type=text],input[type=password],select,textarea {border:none}
+.vert{color:#008A54;}
+
+div#header {position:fixed; top:0px; left:0; padding:0; margin:0; margin:auto; z-index:100000; width:100%; font-size:16px; height:215px; overflow:hidden;}
+
+div#header, div#header #back, div#header #names, div#header #logo, div#header #menu { -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; -ms-transition: all 0.3s; -o-transition: all 0.3s;}
+
+div#header #back {position:absolute; width:100%; height:215px; opacity:0; background:#ffffff;}
+div#header #names {position:absolute;left:49.5px; top:38px; line-height: 21.5px;}
+div#header #titre {position:relative; height:75px; width:100%; padding:0; margin:0; text-align:center;}
+div#header #logo {height:75px; margin-top: 50px;}
+div#header #sempervirens {margin-top:13px; line-height:24px; font-size:24px;}
+div#header #menu {position:absolute; right:56px; top:38px; text-align:right;}
+
+div#header #menu a {line-height: 21.5px; text-transform:uppercase; font-family:FuturaT-Light;}
+div#header #menu a.current {font-family:"FuturaT-Medium";}
+div#header #names a.current {font-family:"FuturaT-Medium";}
+
+div#header.shrink { height:89px;}
+div#header.shrink #back { height:65px; opacity:0;}
+div#header.shrink #logo { height:64px; margin-top:24px; margin-left:-80%;}
+div#header.shrink #sempervirens {margin-top:10px; line-height:12px; font-size:12px;}
+div#header.shrink #names { top:-30px; font-size:8px; line-height:15px; }
+
+div#gauche { float:left; position:relative; margin-top:204px; margin-left:63px; margin-right:124px; width:115px; text-align:center; }
+div#gauche.shrink { position:fixed; top:103px; left:63px; margin:0px; width:115px; text-align:center;}
+div#content.shrink { margin-left:302px; }
+div#gauche .titre { margin-top:24px; margin-bottom:9px; font-size:23px; line-height:44px; color:#63B486; font-family: FuturaT-Demi;}
+div#gauche .lien { font-size:14px; line-height: 23px; color:#068A54; font-family: FuturaT-Book;}
+div#gauche .vignette { width:115px; height:60px; margin-bottom: 29.5px; margin-top: 14px;}
+
+div#content { float:left; position:relative; width:59.5%; margin-top:144.5px; opacity:1; }
+div#content .headline { width:168.06%; color:#068A54; text-align:center; font-family:FuturaT-Light; font-size:25px; margin:172px 0 30px -305px;}
+div#content .big, div#content .small, div#content .separe { float:left; } 
+div#content .big { width:56.4%; }
+div#content .big img { width:100%; }
+div#content .big .titre { font-family:FuturaT-Book; font-size:18px; color:#575757; text-align:center; line-height:22px; margin-top:23.5px; }
+div#content .big .soustitre { font-family:FuturaT-Light; font-size:17px; color:#000000; text-align:center; line-height:20px; margin-top:2px; }
+div#content .big .abstract{ font-family:FuturaT-Book; font-size:15px; color:#7E7E7E; text-align:center; line-height:20px; margin-top:17px; }
+div#content .separe { width:6.6%; }
+div#content .small { width:37%; }
+div#content .small img { width:100%; }
+div#content .small .titre { font-family:FuturaT-Medium; font-size:18px; color:#313031; text-align:center; line-height:22px; margin-top:22.5px; }
+div#content .small .soustitre { font-family:FuturaT-Light; font-size:19px; color:#313031; text-align:center; line-height:20px; margin-top:2px; }
+div#content .small .abstract{ font-family:FuturaT-Light; font-size:15px; color:#313031; text-align:center; line-height:15.5px; margin-top:19.5px; }
+div#content .small .liens{ font-family:FuturaT-Light; font-size:14px; color:#313031; text-align:center; line-height:20px; margin-top:27px; text-transform: uppercase;}
+
+div#footer { position:relative; height:230px; width:100%; text-align:center; }
+div#footer .texte { font-size:17px; font-family:FuturaT-Light; padding-top: 200px;}
+
+</style>
+
+
+<!-- <div style="width:100%;height:100%; text-align: center; position:absolute; top:0px; left:00px; z-index:40;">
+<img src="./maquette-home2.jpg" style="width:1209px; z-index:40;" />
+</div> -->
+
+
+<!-- entête -->
+<div id="header">
+	<div id="back"></div>
+	<div id="titre">
+		<img src="./logo2.png" id="logo"/><br>
+		<div id="sempervirens">Sempervirens</div>
+		<div style="margin-top:8.5px; font-size:14.5px; line-height:24px; font-family:FuturaT-Medium;">
+			<span style="padding-right: 8.5px;">Paysage</span>
+			<span style="padding-right: 8.5px;">Urbanisme</span> 
+			<span style="padding-right: 2px;">Design</span>
+		</div>
+	</div>
+	<div id="names">
+		<span>Frédéric Charles Aillet</span><br/>
+		<span>Raphaël Favory</span><br/>
+		<span>Pierre Sarrien</span>
+	</div>
+	<div id="menu">
+		<a href="" class="current">actualité</a><br/>
+		<a href="">projets</a><br/>
+		<a href="">agence</a><br/>
+		<img src="./assets/search.png" style="height:16px; margin-top:3px" />
+	</div>
+</div>
+
+<!-- colonne gauche -->
+<div id="gauche" style="z-index: 45;">
+	<div class="titre">Projets</div>
+	<div class="vignette"><img src="./content/vignette.jpg" width="115" /></div>
+	<div class="lien">sélection</div>
+	<div class="lien">chronologie</div>
+	<div class="lien">phases</div>
+	<div class="lien">géographie</div>
+
+	<div class="titre">Actualité</div>
+	<div class="lien">Mars 2017</div>
+	<div class="lien">actuellement</div>
+	<div class="lien">archive</div>
+
+	<div class="titre">Agence</div>
+	<div class="lien">équipe</div>
+	<div class="lien">approche</div>
+	<div class="lien">nous recrutons</div>
+	<div class="lien">book</div>
+
+	<div class="lien" style="line-height:3em;">-</div>
+
+	<div class="lien"><b>fr</b> &nbsp; en</div>
+</div>
+
+<!-- contenu -->
+<div id="content" style="z-index: 45;">
+	<div class="headline">Avril 2017 : Laval, Knokke-Le-Zoute, Tokyo</div>
+	<div class="big">
+		<img src="./content/actu1.jpg" />
+		<div class="titre">
+			Concours Lauréat
+		</div>
+		<div class="soustitre">
+			Espace Mayenne à Laval
+		</div>
+		<div class="abstract">
+			SEMPERVIRENS gagne avec avec Hérault Arnod le projet d'aménagement du centre culturel,
+			de loisirs et évennementielEspace Mayenne à Laval
+		</div>
+	</div>
+	<div class="separe">&nbsp;</div>
+	<div class="small">
+		<img src="./content/actu2.jpg" />
+		<div class="titre">
+			Knokke-Le-Zoute
+		</div>
+		<div class="soustitre">
+			Publication dans Paysage Actualité
+		</div>
+		<div class="abstract">
+			Paysages Actualité publie ce mois-ci un article sur le projet de tour végétalisée
+			dans la station balnéaire de Knokke-le-Zoute.
+		</div>
+		<div class="liens">
+			LIRE L'ARTICLE | VOIR LE PROJET
+		</div>
+	</div>
+	<div style="clear:both;"></div>
+
+	<div class="headline">Mars 2017 : Laval, Knokke-Le-Zoute, Tokyo</div>
+	<div class="small">
+		<img src="./content/actu2.jpg" />
+		<div class="titre">
+			Knokke-Le-Zoute
+		</div>
+		<div class="soustitre">
+			Publication dans Paysage Actualité
+		</div>
+		<div class="abstract">
+			Paysages Actualité publie ce mois-ci un article sur le projet de tour végétalisée
+			dans la station balnéaire de Knokke-le-Zoute.
+		</div>
+		<div class="liens">
+			LIRE L'ARTICLE | VOIR LE PROJET
+		</div>
+	</div>
+	<div class="separe">&nbsp;</div>
+	<div class="big">
+		<img src="./content/actu1.jpg" />
+		<div class="titre">
+			Concours Lauréat
+		</div>
+		<div class="soustitre">
+			Espace Mayenne à Laval
+		</div>
+		<div class="abstract">
+			SEMPERVIRENS gagne avec avec Hérault Arnod le projet d'aménagement du centre culturel,
+			de loisirs et évennementielEspace Mayenne à Laval
+		</div>
+	</div>
+
+	<div style="clear:both;"></div>
+</div>
+
+<div style="clear:both;"></div>
+
+<div id="footer">
+	<div class="texte">(c) sempervirens 2017</div>
+</div>
+
+
+<script type="text/javascript">
+//Set Videos below header
+$("iframe").each(function(){
+	var ifr_source = $(this).attr('src');
+	var wmode = "wmode=transparent";
+	if(ifr_source.indexOf('?') != -1) {
+		var getQString = ifr_source.split('?');
+		var oldString = getQString[1];
+		var newString = getQString[0];
+			$(this).attr('src',newString+'?'+wmode+'&'+oldString);
+	}
+	else $(this).attr('src',ifr_source+'?'+wmode);
+});
+
+
+// $(window).scroll(function () { 
+// 	var scrollCurrent = $(this).scrollTop();
+// 	if (scrollCurrent > 80) {
+// 		$("#top").addClass("grid-hide-header");
+// 		$("#head-menu").hide(300);
+// 		$("#head-names").hide(300);
+// 	} else {
+// 		$("#top").removeClass("grid-hide-header");
+// 		$("#head-names").show(300);
+// 		$("#head-menu").show(300);
+// 	}
+// 	if (scrollCurrent > 80 && scrollCurrent < 120) {
+// 		$("#head-bottom").height(160-scrollCurrent);
+// 	}
+// });
+
+$(function(){
+ var shrinkHeader = 100;
+  $(window).scroll(function() {
+    var scroll = getCurrentScroll();
+      if ( scroll >= shrinkHeader ) {
+           $('#header').addClass('shrink');
+           $('#gauche').addClass('shrink');
+           $('#content').addClass('shrink');
+           $('#names').hide(300);
+           $('#menu').hide(300);
+        }
+        else {
+        	$('#names').show(300);
+            $('#menu').show(300);
+            $('#header').removeClass('shrink');
+            $('#gauche').removeClass('shrink');
+            $('#content').removeClass('shrink');
+        }
+  });
+function getCurrentScroll() {
+    return window.pageYOffset || document.documentElement.scrollTop;
+    }
+});
+</script>
+
+
+
+
+
+</body>
+
+</html>
