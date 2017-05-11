@@ -2,6 +2,7 @@
 
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=1209" />
 <link href="./typo.css?v=1" media="all" rel="stylesheet" type="text/css" />
 <script src="./jquery-3.2.1.min.js"></script>
 </head>
@@ -20,6 +21,20 @@ a {text-decoration:none;color:#008A54; cursor:pointer; cursor:hand;}
 h1,h2,h3 {font-weight:normal}
 input[type=text],input[type=password],select,textarea {border:none}
 .vert{color:#008A54;}
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+	/* dimension utile après éventuelle remise a l'échelle */
+	body { background-color:#ffffff; }
+}
+
+@media all and (max-device-width: 600px) {
+	/* c'est un mobile */
+}
+
+@media all and (min-device-width: 601px) and (max-device-width: 1040px) {
+	/* c'est une tablette */
+	body { background-color:#ffffff; }
+}
 
 div#header {position:fixed; top:0px; left:0; padding:0; margin:0; margin:auto; z-index:100000; width:100%; font-size:16px; height:215px; overflow:hidden;}
 
@@ -233,6 +248,8 @@ $("iframe").each(function(){
 // 		$("#head-bottom").height(160-scrollCurrent);
 // 	}
 // });
+
+if (window.console) console.log('foo');
 
 $(function(){
  var shrinkHeader = 100;
